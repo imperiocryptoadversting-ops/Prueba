@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Floreria Gobierno de Cambios</title>
+    <style>
+        /* CCB-2026-001: Reestructuracion estetica - Priorizacion de KPIs */
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #27ae60;
+            --bg-color: #ecf0f1;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        .dashboard-container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        .kpi-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .kpi-priority-high {
+            border-left: 5px solid var(--accent-color);
+            order: -1;
+        }
+        .kpi-title {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .kpi-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+        @media (max-width: 768px) {
+            .kpi-card { padding: 15px; }
+            .kpi-value { font-size: 2rem; }
+        }
+        @media (max-width: 320px) {
+            body { padding: 10px; }
+            .kpi-title { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="kpi-card kpi-priority-high">
+            <h2 class="kpi-title">Pedidos Pendientes</h2>
+            <div class="kpi-value">23</div>
+            <p>Prioridad: Alta - Revision inmediata requerida</p>
+        </div>
+        <div class="kpi-card">
+            <h2 class="kpi-title">Ventas del Dia</h2>
+            <div class="kpi-value">$1,247</div>
+            <p>Actualizado: 14/05/2026 10:30 AM</p>
+        </div>
+        <div class="kpi-card">
+            <h2 class="kpi-title">Clientes Activos</h2>
+            <div class="kpi-value">156</div>
+            <p>Crecimiento: +12% vs semana anterior</p>
+        </div>
+    </div>
+</body>
+</html>
